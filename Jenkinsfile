@@ -6,9 +6,6 @@ pipeline {
     agent { 
         dockerfile {
                 filename "${TESTCAFE_DOCKER_PATH}"
-                args  '--net=host -e DISPLAY=":0"'
-                args '--entrypoint=\'\''
-                reuseNode true
         } 
     }
 
