@@ -1,11 +1,7 @@
-node {
-    TESTCAFE_DOCKER_PATH = 'Dockerfile'
-}
-
 pipeline {
     agent { 
         dockerfile {
-                filename "${TESTCAFE_DOCKER_PATH}"
+                filename "Dockerfile"
         } 
     }
 
