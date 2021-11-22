@@ -12,21 +12,24 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                checkout([
-                    $class: 'GitSCM', 
-                    branches: [
-                        [
-                            name: '*/master'
-                        ]
-                    ],
-                    userRemoteConfigs: [
-                        [
-                            url: 'https://github.com/amr-hu/testcafe-poc.git'
-                        ]
-                    ]
-                ])
+                // checkout([
+                //     $class: 'GitSCM', 
+                //     branches: [
+                //         [
+                //             name: '*/master'
+                //         ]
+                //     ],
+                //     userRemoteConfigs: [
+                //         [
+                //             url: 'https://github.com/amr-hu/testcafe-poc.git'
+                //         ]
+                //     ]
+                // ])
+                git clone "ssh://git@github.com:amr-hu/testcafe-poc.git"
+                echo 'Cloning repo'
             }
         }
+
         stage('Configuration') {
             steps {
                 sh 'docker rm -f test_container'
