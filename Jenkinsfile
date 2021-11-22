@@ -1,6 +1,11 @@
 pipeline {
     agent { 
-        dockerfile true
+        dockerfile {
+            filename "/Dockerfile"
+            args  '--net=host -e DISPLAY=":0"'
+            args '--entrypoint=\'\''
+            reuseNode true
+        } 
     }
 
     environment {
