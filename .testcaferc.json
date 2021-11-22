@@ -1,5 +1,4 @@
 {
-    "reporter": "allure",
     "screenshots": {
         "path": "allure/screenshots",
         "takeOnFails": true,

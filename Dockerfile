@@ -14,10 +14,8 @@ RUN mkdir -p /tests
 COPY poc /tests
 
 # Copy the package.json file to the image
+COPY [".testcaferc.json", "Jenkinsfile", "doc-allure-config.js", "./"]
 COPY package.json /opt/testcafe
 
 # Installing custom dependencies from package.json file
 RUN cd /opt/testcafe && npm install
-
-# Copy other needed files to the root directory of the image
-COPY [".testcaferc.json", "Jenkinsfile", "doc-allure-config.js", "./"]
