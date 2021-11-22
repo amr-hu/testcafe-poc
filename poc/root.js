@@ -3,7 +3,7 @@ fixture("Root Fixture");
 test.meta("ID", 'SEAL-dummy2')("Root Test",
     async (t) => {
         console.log("Root Test");
-        await t.expect(false).ok();
+        // await t.expect(false).ok();
     }
 );
 
