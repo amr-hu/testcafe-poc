@@ -2,25 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout(
-                    [
-                        $class: 'GitSCM', 
-                        branches: [
-                            [
-                                name: '*/main'
-                            ]
-                        ],
-                        userRemoteConfigs: [
-                            [
-                                url: 'https://github.com/amr-hu/testcafe-poc.git'
-                            ]
-                        ]
-                    ]
-                )
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         checkout(
+        //             [
+        //                 $class: 'GitSCM', 
+        //                 branches: [
+        //                     [
+        //                         name: '*/main'
+        //                     ]
+        //                 ],
+        //                 userRemoteConfigs: [
+        //                     [
+        //                         url: 'https://github.com/amr-hu/testcafe-poc.git'
+        //                     ]
+        //                 ]
+        //             ]
+        //         )
+        //     }
+        // }
 
         stage('Build') {
             steps {
@@ -37,27 +37,32 @@ pipeline {
         }
 
         stage('Publish Report') {
-            steps{
-                // publishHTML(
-                //     target: [
-                //         allowMissing         : false,
-                //         alwaysLinkToLastBuild: false,
-                //         keepAll              : true,
-                //         reportDir            : './reports/allure/allure-report',
-                //         reportFiles          : 'index.html',
-                //         reportName           : "Allure Report"
-                //     ]
-                // )
-                script {
-                    allure(
-                        [
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'target/allure-results']]
-                        ]
-                    )
+            // steps{
+            //     // publishHTML(
+            //     //     target: [
+            //     //         allowMissing         : false,
+            //     //         alwaysLinkToLastBuild: false,
+            //     //         keepAll              : true,
+            //     //         reportDir            : './reports/allure/allure-report',
+            //     //         reportFiles          : 'index.html',
+            //     //         reportName           : "Allure Report"
+            //     //     ]
+            //     // )
+            //     script {
+            //         allure(
+            //             [
+            //                 includeProperties: false,
+            //                 jdk: '',
+            //                 properties: [],
+            //                 reportBuildPolicy: 'ALWAYS',
+            //                 results: [[path: 'target/allure-results']]
+            //             ]
+            //         )
+            //     }
+            // }
+            post {
+                always {
+                    allure includeProperties: false, jdk: '', results: [[path: 'allure/allure-results']]
                 }
             }
         }
