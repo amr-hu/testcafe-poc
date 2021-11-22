@@ -9,13 +9,18 @@ pipeline {
     // }
 
     agent any
-    
-    environment {
-        HOME = '.'
-    }
+
+    // environment {
+    //     HOME = '.'
+    // }
 
     stages {
-        stage('Clone') {
+        stage('Initialize'){
+            def dockerHome = tool 'MyDocker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }
+
+        stage('Checkout') {
             steps {
                 checkout([
                     $class: 'GitSCM', 
@@ -33,7 +38,7 @@ pipeline {
             }
         }
 
-        stage('Configuration') {
+        stage('Build') {
             steps {
                 sh 'docker rm -f test_container'
                 sh 'docker rmi -f test_image'
@@ -41,7 +46,7 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Test') {
             steps {
                 sh 'docker run --name test_container -d test_image firefox:headless -c 5 --skip-js-errors'
             }
