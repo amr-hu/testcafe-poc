@@ -1,10 +1,14 @@
+node {
+    TESTCAFE_DOCKER_PATH = '/Dockerfile'
+}
+
 pipeline {
     agent { 
         dockerfile {
-            filename "/Dockerfile"
-            args  '--net=host -e DISPLAY=":0"'
-            args '--entrypoint=\'\''
-            reuseNode true
+            filename "${TESTCAFE_DOCKER_PATH}"
+            // args  '--net=host -e DISPLAY=":0"'
+            // args '--entrypoint=\'\''
+            // reuseNode true
         } 
     }
 
