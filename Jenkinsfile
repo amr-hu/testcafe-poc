@@ -37,7 +37,8 @@ pipeline {
         }
 
         stage('Publish Report') {
-            // steps{
+            steps{
+                sh 'allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report'
             //     // publishHTML(
             //     //     target: [
             //     //         allowMissing         : false,
@@ -59,12 +60,12 @@ pipeline {
             //             ]
             //         )
             //     }
-            // }
-            post {
-                always {
-                    allure includeProperties: false, jdk: '', results: [[path: 'allure/allure-results']]
-                }
             }
+            // post {
+            //     always {
+            //         allure includeProperties: false, jdk: '', results: [[path: 'allure/allure-results']]
+            //     }
+            // }
         }
     }
 }
