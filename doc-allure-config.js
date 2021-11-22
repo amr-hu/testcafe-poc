@@ -9,8 +9,8 @@ const DOC_ALLURE_CONFIG = {
         screenshotLabel: 'Screenshot',
         browserLabel: 'Browser',
         userAgentLabel: 'User Agent',
-        allureStartMessage: 'Allure reporter started...',
-        allureClosedMessage: 'Allure reporter closed...'
+        allureStartMessage: 'Allure reporter started.....',
+        allureClosedMessage: 'Allure reporter closed.....'
     }
 };
 
