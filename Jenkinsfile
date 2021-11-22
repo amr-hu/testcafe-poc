@@ -25,7 +25,7 @@ pipeline {
                 //         ]
                 //     ]
                 // ])
-                git clone "ssh://git@github.com:amr-hu/testcafe-poc.git"
+                step git clone "ssh://git@github.com:amr-hu/testcafe-poc.git"
                 echo 'Cloning repo'
             }
         }
