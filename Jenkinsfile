@@ -16,20 +16,20 @@ pipeline {
             }
         }
 
-        stage('Report') {
-            steps {
-                script {
-                    allure(
-                        [
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'allure/allure-results']]
-                        ]
-                    )
-                }
-            }
-        }
+        // stage('Report') {
+        //     steps {
+        //         script {
+        //             allure(
+        //                 [
+        //                     includeProperties: false,
+        //                     jdk: '',
+        //                     properties: [],
+        //                     reportBuildPolicy: 'ALWAYS',
+        //                     results: [[path: 'allure/allure-results']]
+        //                 ]
+        //             )
+        //         }
+        //     }
+        // }
     }
 }
