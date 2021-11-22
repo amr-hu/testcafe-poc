@@ -8,7 +8,7 @@ pipeline {
     //     } 
     // }
 
-    agent any
+    agent docker
 
     // environment {
     //     HOME = '.'
