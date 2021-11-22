@@ -1,0 +1,9 @@
+{
+    "reporter": "allure",
+    "screenshots": {
+        "path": "allure/screenshots",
+        "takeOnFails": true,
+        "fullPage": true,
+        "pathPattern": "${TEST}.png"
+    }
+}

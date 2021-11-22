@@ -1,18 +1,5 @@
 pipeline {
-    // agent { 
-    //     dockerfile {
-    //         filename "/Dockerfile"
-    //         args  '--net=host -e DISPLAY=":0"'
-    //         args '--entrypoint=\'\''
-    //         reuseNode true
-    //     } 
-    // }
-
     agent any
-
-    // environment {
-    //     HOME = '.'
-    // }
 
     stages {
         stage('Checkout') {
