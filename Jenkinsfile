@@ -1,4 +1,4 @@
-pipeline {
+node {
     // agent { 
     //     dockerfile {
     //         filename "/Dockerfile"
@@ -14,7 +14,7 @@ pipeline {
     //     HOME = '.'
     // }
 
-    stages {
+    // stages {
         stage('Initialize'){
             def dockerHome = tool 'MyDocker'
             env.PATH = "${dockerHome}/bin:${env.PATH}"
@@ -66,5 +66,5 @@ pipeline {
                 )
             }
         }
-    }
+    // }
 }
