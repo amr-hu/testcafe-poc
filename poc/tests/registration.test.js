@@ -13,27 +13,30 @@ fixture("Registration Fixture")
         }
     );
 
-users.forEach(user => {
-    test.meta("ID", 'SEAL-dummy1')
-        (`${user} registration`, async (t) => {
-            console.log(`${user} clicked the registration button`);
+users.forEach(
+    user => {
+        test.meta("ID", 'SEAL-dummy1')(`${user} registration`,
+            async (t) => {
+                console.log(`${user} clicked the registration button`);
 
-            user = "User" + Math.floor(Math.random() * 100000) + 1;
+                user = "User" + Math.floor(Math.random() * 100000) + 1;
 
-            await t.click(".male")
-                .typeText("#FirstName", `${user} First Name`, { replace: true, paste: true })
-                .typeText("#LastName", `${user} Last Name`, { replace: true, paste: true })
-                .click("[name='DateOfBirthDay']")
-                .click(Selector("option").withExactText("4"))
-                .click("[name='DateOfBirthMonth']")
-                .click(Selector("option").withExactText("September"))
-                .click("[name='DateOfBirthYear']")
-                .click(Selector("option").withExactText("1992"))
-                .typeText("#Email", user + "@mail.com", { replace: true, paste: true })
-                .typeText("#Company", "DocuSign", { replace: true, paste: true })
-                .typeText("#Password", "P@ssw0rd", { replace: true, paste: true })
-                .typeText("#ConfirmPassword", "P@ssw0rd", { replace: true, paste: true })
-                .click("#register-button")
-                .expect(Selector(".result").withExactText("Your registration completed").exists).ok();
-        });
-})
+                await t.click(".male")
+                    .typeText("#FirstName", `${user} First Name`, { replace: true, paste: true })
+                    .typeText("#LastName", `${user} Last Name`, { replace: true, paste: true })
+                    .click("[name='DateOfBirthDay']")
+                    .click(Selector("option").withExactText("4"))
+                    .click("[name='DateOfBirthMonth']")
+                    .click(Selector("option").withExactText("September"))
+                    .click("[name='DateOfBirthYear']")
+                    .click(Selector("option").withExactText("1992"))
+                    .typeText("#Email", user + "@mail.com", { replace: true, paste: true })
+                    .typeText("#Company", "DocuSign", { replace: true, paste: true })
+                    .typeText("#Password", "P@ssw0rd", { replace: true, paste: true })
+                    .typeText("#ConfirmPassword", "P@ssw0rd", { replace: true, paste: true })
+                    .click("#register-button")
+                    .expect(Selector(".result").withExactText("Your registration completed").exists).ok();
+            }
+        );
+    }
+)

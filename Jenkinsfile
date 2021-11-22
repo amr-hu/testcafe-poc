@@ -19,10 +19,14 @@ pipeline {
                 checkout([
                     $class: 'GitSCM', 
                     branches: [
-                        [name: '*/master']
+                        [
+                            name: '*/master'
+                        ]
                     ],
                     userRemoteConfigs: [
-                        [url: 'https://github.com/amr-hu/testcafe-poc.git']
+                        [
+                            url: 'https://github.com/amr-hu/testcafe-poc.git'
+                        ]
                     ]
                 ])
             }
@@ -35,7 +39,7 @@ pipeline {
             }
         }
 
-        stage('Run TestCafe') {
+        stage('Run Tests') {
             steps {
                 sh 'docker run --name test_container -d test_image firefox:headless -c 5 --skip-js-errors'
             }
