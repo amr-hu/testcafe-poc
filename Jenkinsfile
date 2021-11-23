@@ -4,15 +4,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker rm -f test_container'
-                sh 'docker rmi -f test_image'
-                sh 'docker build -t test_image .'
+                // sh 'docker rm -f test_container'
+                // sh 'docker rmi -f test_image'
+                // sh 'docker build -t test_image .'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'docker run --name test_container test_image firefox:headless -c 5 --skip-js-errors'
+                // sh 'docker run --name test_container test_image firefox:headless -c 5 --skip-js-errors'
+                sh 'testcafe firefox:headless poc -c 5 --skip-js-errors'
             }
         }
 
@@ -22,7 +23,7 @@ pipeline {
                     allure(
                         [
                             includeProperties: false,
-                            jdk: '',
+                            jdk: '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
                             results: [[path: '/allure-results']]
