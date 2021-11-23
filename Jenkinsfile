@@ -27,7 +27,7 @@ pipeline {
                             jdk: '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: '/allure-results']]
+                            results: [[path: 'allure/allure-results']]
                         ]
                     )
                 }
