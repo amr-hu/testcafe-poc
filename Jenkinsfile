@@ -19,7 +19,7 @@ pipeline {
             post {
                 always {
                     junit "${WORKSPACE}/test-results/*.xml",
-                    testDataPublishers: [[$class: 'TestCafePublisher']],
+                    testDataPublishers: [[$class: 'TestCafePublisher']]
                     // testResults: '*.xml'
                 }
             }
