@@ -18,20 +18,20 @@ pipeline {
             }
         }
 
-        // stage('Report') {
-        //     steps {
-        //         script {
-        //             allure(
-        //                 [
-        //                     includeProperties: false,
-        //                     jdk: '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home',
-        //                     properties: [],
-        //                     reportBuildPolicy: 'ALWAYS',
-        //                     results: [[path: 'allure/allure-results']]
-        //                 ]
-        //             )
-        //         }
-        //     }
-        // }
+        stage('Report') {
+            steps {
+                script {
+                    allure(
+                        [
+                            // includeProperties: false,
+                            // jdk: '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home',
+                            // properties: [],
+                            // reportBuildPolicy: 'ALWAYS',
+                            results: [[path: 'allure/allure-results']]
+                        ]
+                    )
+                }
+            }
+        }
     }
 }
