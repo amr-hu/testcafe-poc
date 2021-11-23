@@ -7,7 +7,7 @@
     "videoPath": "videos",
     "reporter": [
         {
-            "reporter": "spec"
+            "name": "spec"
         },
         {
             "name": "jenkins",
