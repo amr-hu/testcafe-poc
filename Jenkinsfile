@@ -18,9 +18,9 @@ pipeline {
             }
             post {
                 always {
-                    junit keepLongStdio: true,
+                    junit "${WORKSPACE}/test-results/*.xml",
                     testDataPublishers: [[$class: 'TestCafePublisher']],
-                    testResults: '*.xml'
+                    // testResults: '*.xml'
                 }
             }
         }
