@@ -5,8 +5,13 @@
         "pathPattern": "${TEST}.png"
     },
     "videoPath": "videos",
-    "reporter": {
-        "name": "jenkins",
-        "output": "report.xml"
-    }
+    "reporter": [
+        {
+            "reporter": "list"
+        },
+        {
+            "name": "jenkins",
+            "output": "report.xml"
+        }
+    ]
 }
