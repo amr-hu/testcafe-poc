@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                // sh 'docker rm -f test_container'
-                // sh 'docker rmi -f test_image'
-                // sh 'docker build -t test_image .'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         // sh 'docker rm -f test_container'
+        //         // sh 'docker rmi -f test_image'
+        //         // sh 'docker build -t test_image .'
+        //     }
+        // }
 
         stage('Test') {
             steps {
