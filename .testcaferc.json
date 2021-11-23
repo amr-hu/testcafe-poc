@@ -5,6 +5,11 @@
         "pathPattern": "${TEST}.png"
     },
     "videoPath": "videos",
+    "videoOptions": {
+        "singleFile": false,
+        "failedOnly": true,
+        "pathPattern": "${TEST}.mp4"
+    },
     "reporter": [
         {
             "name": "spec"

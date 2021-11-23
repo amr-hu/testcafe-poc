@@ -17,7 +17,7 @@ fixture("Registration Fixture")
 
 users.forEach(
     user => {
-        test.meta("ID", 'SEAL-dummy1')(`${user} registration`,
+        test.skip.meta("ID", 'SEAL-dummy1')(`${user} registration`,
             async (t) => {
                 console.log(`${user} clicked the registration button`);
 
