@@ -13,6 +13,7 @@
     "allure-commandline": "^2.13.8",
     "testcafe": "^1.17.1",
     "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-jenkins": "^1.0.1",
     "xlsx": "^0.17.4"
   }
 }
