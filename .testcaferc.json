@@ -16,7 +16,7 @@
         },
         {
             "name": "jenkins",
-            "output": "report.xml"
+            "output": "report/report.xml"
         }
     ]
 }
