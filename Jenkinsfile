@@ -25,7 +25,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'allure-results']]
+                            results: [[path: '/var/lib/jenkins/workspace/first-pipeline/allure-results']]
                         ]
                     )
                 }
