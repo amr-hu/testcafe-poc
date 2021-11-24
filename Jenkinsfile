@@ -7,45 +7,28 @@ pipeline {
                 sh 'docker rm -f test_container'
                 sh 'docker rmi -f test_image'
                 sh 'docker build -t test_image .'
-                // sh 'npm install'
             }
         }
 
         stage('Test') {
             steps {
                 sh 'docker run --name test_container test_image firefox:headless -c 3 --skip-js-errors'
-                // sh 'testcafe firefox:headless poc -c 5 --skip-js-errors'
             }
             post {
-                always {
-                    allure(
-                        [
-                            results: [
-                                [
-                                    path: 'docker exec -it test_container /bin/sh/allure/allure-results'
+                dir('/allure') {
+                    always {
+                        allure(
+                            [
+                                results: [
+                                    [
+                                        path: '/allure-results'
+                                    ]
                                 ]
                             ]
-                        ]
-                    )
+                        )
+                    }
                 }
             }
         }
-
-        // stage('Report') {
-        //     steps {
-        //         script {
-        //             allure(
-        //                 [
-        //                     results: [
-        //                         [
-        //                             path: 'allure/allure-results'
-        //                         ]
-        //                     ]
-        //                 ]
-        //             )
-        //         }
-        //     }
-            
-        // }
     }
 }
