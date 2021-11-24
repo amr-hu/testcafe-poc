@@ -10,13 +10,5 @@
         "failedOnly": true,
         "pathPattern": "${TEST}.mp4"
     },
-    "reporter": [
-        {
-            "name": "spec"
-        },
-        {
-            "name": "jenkins",
-            "output": "report/report.xml"
-        }
-    ]
+    "reporter": "allure"
 }

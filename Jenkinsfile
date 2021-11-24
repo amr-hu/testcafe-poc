@@ -13,16 +13,16 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'docker run --name test_container test_image firefox:headless -c 5 --skip-js-errors'
+                sh 'docker run --name test_container test_image firefox:headless -c 3 --skip-js-errors'
                 // sh 'testcafe firefox:headless poc -c 5 --skip-js-errors'
             }
-            post {
-                always {
-                    junit 'report/report.xml',
-                    testDataPublishers: [[$class: 'TestCafePublisher']]
-                    // testResults: '*.xml'
-                }
-            }
+            // post {
+            //     always {
+            //         junit keepLongStdio: true,
+            //         testDataPublishers: [[$class: 'TestCafePublisher']],
+            //         testResults: '*.xml'
+            //     }
+            // }
         }
 
         // stage('Report') {

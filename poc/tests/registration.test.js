@@ -4,7 +4,7 @@ import xlsx from "xlsx";
 // var users = ["User1", "User2", "User3", "User4", "User5", "User6", "User7", "User8", "User9", "User10", "User11", "User12",
 //     "User13", "User14", "User15", "User16", "User17", "User18", "User19", "User20"];
 
-var users = ["User1", "User2", "User3", "User4", "User5"];
+var users = ["User1"];
 
 fixture("Registration Fixture")
     .page("https://demo.nopcommerce.com/")
@@ -17,12 +17,12 @@ fixture("Registration Fixture")
 
 users.forEach(
     user => {
-        test.skip.meta("ID", 'SEAL-dummy1')(`${user} registration`,
+        test.meta("ID", 'SEAL-dummy1')(`${user} registration`,
             async (t) => {
                 console.log(`${user} clicked the registration button`);
 
                 user = "User" + Math.floor(Math.random() * 100000) + 1;
-
+                await t.expect(false).ok();
                 await t.click(".male")
                     .typeText("#FirstName", `${user} First Name`, { replace: true, paste: true })
                     .typeText("#LastName", `${user} Last Name`, { replace: true, paste: true })
