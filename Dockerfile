@@ -3,8 +3,6 @@ FROM testcafe/testcafe
 # Root privileages to install new dependencies
 USER root
 
-COPY --from=ubuntu /allure ./
-
 # Node modules directory inside the docker image
 ENV NODE_PATH=/opt:/usr/lib/node_modules:/opt/testcafe/node_modules
 
