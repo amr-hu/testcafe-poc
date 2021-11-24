@@ -10,5 +10,9 @@
         "failedOnly": true,
         "pathPattern": "${TEST}.mp4"
     },
-    "reporter": "allure"
+    "reporter": [
+        {
+            "name": "allure"
+        }
+    ]
 }
