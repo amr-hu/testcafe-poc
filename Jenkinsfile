@@ -22,7 +22,7 @@ pipeline {
                         [
                             results: [
                                 [
-                                    path: 'allure/allure-results'
+                                    path: 'docker export allure/allure-results'
                                 ]
                             ]
                         ]
