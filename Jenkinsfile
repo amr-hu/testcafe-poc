@@ -17,7 +17,7 @@ pipeline {
                 // sh 'testcafe firefox:headless poc -c 5 --skip-js-errors'
             }
             post {
-                script {
+                always {
                     allure(
                         [
                             results: [
