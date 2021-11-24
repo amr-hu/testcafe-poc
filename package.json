@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "testcafe": "^1.17.1",
     "testcafe-reporter-allure": "^1.0.5",
     "xlsx": "^0.17.4"
