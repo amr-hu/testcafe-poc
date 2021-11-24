@@ -3,11 +3,5 @@
         "takeOnFails": true,
         "fullPage": true,
         "pathPattern": "${TEST}.png"
-    },
-    "videoPath": "videos",
-    "videoOptions": {
-        "singleFile": false,
-        "failedOnly": true,
-        "pathPattern": "${TEST}.mp4"
     }
 }
