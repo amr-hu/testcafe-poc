@@ -1,5 +1,12 @@
 {
-    "reporter": "allure",
+    "reporter": [
+        {
+            "name": "allure"
+        },
+        {
+            "name": "list"
+        }
+    ],
     "screenshots": {
         "takeOnFails": true,
         "fullPage": true,
