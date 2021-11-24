@@ -16,7 +16,9 @@ pipeline {
             }
             post {
                 always {
-                    def results = sh 'docker container exec -it test_container /bin/sh/allure/allure-results'
+                    step {
+                        def results = sh 'docker container exec -it test_container /bin/sh/allure/allure-results'
+                    }
                     
                     allure(
                         [
