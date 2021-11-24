@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'rm -rf allure'
                 sh 'docker rm -f test_container'
                 sh 'docker rmi -f test_image'
                 sh 'docker build -t test_image .'
@@ -17,13 +16,13 @@ pipeline {
             }
             post {
                 always {
-                    sh 'mkdir -p allure'
-                    sh 'docker cp test_container:/allure/allure-results /allure'
+                    def results = sh 'docker container exec -it test_container /bin/sh/allure/allure-results'
+                    
                     allure(
                         [
                             results: [
                                 [
-                                    path: 'allure'
+                                    path: '${results}'
                                 ]
                             ]
                         ]
