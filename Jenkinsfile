@@ -16,13 +16,19 @@ pipeline {
                 sh 'docker run --name test_container test_image firefox:headless -c 3 --skip-js-errors'
                 // sh 'testcafe firefox:headless poc -c 5 --skip-js-errors'
             }
-            // post {
-            //     always {
-            //         junit keepLongStdio: true,
-            //         testDataPublishers: [[$class: 'TestCafePublisher']],
-            //         testResults: '*.xml'
-            //     }
-            // }
+            post {
+                script {
+                    allure(
+                        [
+                            results: [
+                                [
+                                    path: 'allure/allure-results'
+                                ]
+                            ]
+                        ]
+                    )
+                }
+            }
         }
 
         // stage('Report') {
