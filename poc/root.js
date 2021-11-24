@@ -2,7 +2,7 @@ fixture("Root Fixture");
 
 test.meta("ID", 'SEAL-dummy22')("Root1 Test",
     async (t) => {
-        console.log("Root Test");
+        console.log("Root Testt");
     }
 );
 

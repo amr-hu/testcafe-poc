@@ -1,12 +1,4 @@
-# FROM ubuntu
-
-# USER root
-
-# RUN apt-get update -y
-
-# RUN apt-get install -y allure
-
-FROM testcafe/testcafe AS testcafe
+FROM testcafe/testcafe
 
 # Root privileages to install new dependencies
 USER root
@@ -28,4 +20,3 @@ COPY package.json /opt/testcafe
 
 # Installing custom dependencies from package.json file
 RUN cd /opt/testcafe && npm install
-
