@@ -24,7 +24,7 @@ pipeline {
                         [
                             results: [
                                 [
-                                    path: 'allure'
+                                    path: 'allure/allure-results'
                                 ]
                             ]
                         ]
