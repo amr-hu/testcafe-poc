@@ -12,7 +12,7 @@ RUN mkdir -p /tests
 # Copy the content of the repo from the local machine to the image
 COPY poc /tests
 
-# Copy the package.json file to the image
+# Copy the configurations files to the image
 COPY ["package.json", ".testcaferc.json", "Jenkinsfile", "doc-allure-config.js", "./"]
 
 # Installing custom dependencies from package.json file

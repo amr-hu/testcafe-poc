@@ -14,4 +14,4 @@ const DOC_ALLURE_CONFIG = {
     }
 };
 
-module.exports = DOC_ALLURE_CONFIG;
+export default DOC_ALLURE_CONFIG;
