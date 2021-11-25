@@ -13,7 +13,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'docker run --name test_container test_image firefox:headless -c 3 --skip-js-errors'
+                sh 'docker run --name test_container test_image firefox:headless -c 5 --skip-js-errors'
             }
             post {
                 always {
