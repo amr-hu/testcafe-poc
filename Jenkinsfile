@@ -18,8 +18,8 @@ pipeline {
             post {
                 always {
                     sh 'mkdir -p allure'
-                    sh 'docker exec -it test_container /bin/sh'
-                    sh 'docker cp test_container:/allure/allure-results/* .'
+                    // sh 'docker exec -it test_container /bin/sh'
+                    sh 'docker cp test_container:/allure/allure-results/ .'
                     allure(
                         [
                             results: [
