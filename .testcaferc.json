@@ -9,5 +9,6 @@
         "takeOnFails": true,
         "fullPage": true,
         "pathPattern": "${TEST}.png"
-    }
+    },
+    "browserInitTimeout": 180000
 }
