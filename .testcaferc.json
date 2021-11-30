@@ -1,9 +1,8 @@
 {
-    "reporter": [
-        {
-            "name": "list"
-        }
-    ],
+    "reporter": {
+        "name": "jenkins",
+        "output": "report.xml"
+    },
     "screenshots": {
         "path": "allure/screenshots/",
         "takeOnFails": true,
