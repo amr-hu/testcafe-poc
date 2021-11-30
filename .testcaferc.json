@@ -1,7 +1,6 @@
 {
     "reporter": {
-        "name": "jenkins",
-        "output": "report.xml"
+        "name": "allure"
     },
     "screenshots": {
         "path": "allure/screenshots/",
