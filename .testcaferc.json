@@ -1,9 +1,6 @@
 {
     "reporter": [
         {
-            "name": "jenkins"
-        },
-        {
             "name": "list"
         }
     ],
