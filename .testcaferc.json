@@ -1,7 +1,12 @@
 {
-    "reporter": {
-        "name": "allure"
-    },
+    "reporter": [
+        {
+            "name": "allure"
+        },
+        {
+            "name": "list"
+        }
+    ],
     "screenshots": {
         "path": "allure/screenshots/",
         "takeOnFails": true,
