@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "allure-commandline": "^2.13.8",
     "testcafe-reporter-allure": "^1.0.5",
     "xlsx": "^0.17.4"
   }
