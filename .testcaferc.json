@@ -1,7 +1,7 @@
 {
     "reporter": [
         {
-            "name": "allure"
+            "name": "jenkins"
         },
         {
             "name": "list"
