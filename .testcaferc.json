@@ -1,9 +1,6 @@
 {
     "reporter": [
         {
-            "name": "allure"
-        },
-        {
             "name": "list"
         }
     ],
