@@ -8,7 +8,7 @@
         }
     ],
     "screenshots": {
-        "path": "allure/screenshots/",
+        "path": "${PWD}/test/allure/screenshots/",
         "takeOnFails": true,
         "fullPage": true,
         "pathPattern": "${TEST}.png"

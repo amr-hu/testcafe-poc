@@ -1,8 +1,8 @@
 const DOC_ALLURE_CONFIG = {
     CLEAN_REPORT_DIR: true,
     COPY_HISTORY: false,
-    RESULT_DIR: '/allure/allure-results',
-    REPORT_DIR: '/allure',
+    RESULT_DIR: '${PWD}/test/allure/allure-results',
+    REPORT_DIR: '${PWD}/test/allure',
     TEST_LABEL: 'JIRA Test Link',
     TEST_URL: 'https://jira.corp.docusign.com/browse/{{ID}}',
     labels: {
