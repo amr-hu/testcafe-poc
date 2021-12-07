@@ -14,5 +14,5 @@
         "pathPattern": "${TEST}.png"
     },
     "browserInitTimeout": 180000,
-    "proxy": "192.168.1.5:8090"
+    "proxy": "8.8.8.8"
 }
