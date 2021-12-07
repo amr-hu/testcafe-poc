@@ -13,6 +13,5 @@
         "fullPage": true,
         "pathPattern": "${TEST}.png"
     },
-    "browserInitTimeout": 180000,
-    "proxy": "8.8.8.8"
+    "browserInitTimeout": 180000
 }
