@@ -13,5 +13,6 @@
         "fullPage": true,
         "pathPattern": "${TEST}.png"
     },
-    "browserInitTimeout": 180000
+    "browserInitTimeout": 180000,
+    "proxy": "192.168.1.5:8090"
 }
