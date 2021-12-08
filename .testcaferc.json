@@ -7,7 +7,7 @@
             "name": "list"
         },
         {
-            "name": "xunit",
+            "name": "junit",
             "output": "xunit.xml"
         }
     ],
