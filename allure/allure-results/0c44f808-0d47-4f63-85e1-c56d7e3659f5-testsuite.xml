@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1638964442244' stop='1638964442245'>
+    <name>Root Fixture</name>
+    <title>Root Fixture</title>
+    <test-cases>
+        <test-case start='1638964442244' status='passed' stop='1638964442439'>
+            <name>Root1 Test</name>
+            <title>Root1 Test</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Firefox 95.0 / macOS 10.15'/>
+                <parameter kind='argument' name='JIRA Test Link' value='https://jira.corp.docusign.com/browse/SEAL-dummy22'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been passed.</message>
+                <stack-trace>no error</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
