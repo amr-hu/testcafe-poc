@@ -5,10 +5,6 @@
         },
         {
             "name": "list"
-        },
-        {
-            "name": "junit",
-            "output": "xunit.xml"
         }
     ],
     "screenshots": {
